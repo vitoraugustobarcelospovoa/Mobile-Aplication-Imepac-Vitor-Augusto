@@ -8,13 +8,15 @@ import { useNavigation } from '@react-navigation/native';
 import registro from "../../assets/registro-de-usuario.png";
 import listaBeneficiario from "../../assets/lista-beneficiario.png";
 import cadastroBeneficiario from "../../assets/beneficiario.png";
+import listaUsuarios from "../../assets/user-img.png"; 
 
 export default function HomePage({ usuario, onLogout }) {
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const navigation = useNavigation();
 
   const cards = [
-    { label: "Usuários", img: registro, nav: 'Cadastro' },
+    { label: "Usuários", img: listaUsuarios, nav: 'Cadastro' },
+    { label: "Lista de Usuários", img: registro, nav: 'Usuarios' }, // <-- NOVO CARD
     { label: "Beneficiários", img: listaBeneficiario, nav: 'Beneficiarios' },
     { label: "Cadastro de Beneficiário", img: cadastroBeneficiario, nav: 'BeneficiarioCadastro' },
   ];

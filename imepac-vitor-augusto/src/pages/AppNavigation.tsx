@@ -6,6 +6,8 @@ import { useState } from "react";
 import { Alert } from "react-native";
 import handleHome from "./home";
 import CadastroBeneficiario from "./cadastro-beneficiario";
+import ListaBeneficiarios from "./listar-benefiario";
+import ListaUsuarios from "./listar-usuarios";
 
 type RootStackParamList = {
     Login: undefined;
@@ -23,6 +25,11 @@ export default function AppNavigation() {
                 <Stack.Screen name="Cadastro" component={Cadastro} />
                 <Stack.Screen name="Home" component={handleHome} />
                 <Stack.Screen name="BeneficiarioCadastro" component={CadastroBeneficiario} />
+                <Stack.Screen name="Beneficiarios" component={ListaBeneficiarios} />
+                <Stack.Screen name="Usuarios" component={ListaUsuarios} />
+
+
+
 
 
 
