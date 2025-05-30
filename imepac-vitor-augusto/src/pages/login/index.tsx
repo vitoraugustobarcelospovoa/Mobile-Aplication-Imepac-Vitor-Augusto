@@ -22,7 +22,7 @@ export default function Login({ navigation }: Props) {
         return Alert.alert('Preencha todos os campos');
     }
 
-    fetch("http://192.168.195.71:8080/api/usuarios/login", {
+    fetch("http://192.168.1.23:8080/api/usuarios/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: email, senha: senha })

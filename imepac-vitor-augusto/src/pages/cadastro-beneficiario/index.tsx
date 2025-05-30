@@ -59,7 +59,7 @@ export default function CadastroBeneficiario() {
     }
 
     try {
-      await axios.post('http://192.168.195.71:8080/api/beneficiarios', {
+      await axios.post('http://192.168.1.23:8080/api/beneficiarios', {
         cnpjCpf: cnpjCpf.replace(/\D/g, ''), 
         nomeRazaoSocial: razaoSocial,
         nomeFantasia,

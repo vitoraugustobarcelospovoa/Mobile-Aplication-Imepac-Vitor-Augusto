@@ -23,7 +23,7 @@ export default function Cadastro({ navigation }: Props) {
     return Alert.alert("Preencha todos os campos");
   }
 
-  fetch("http://192.168.195.71:8080/api/usuarios", {
+  fetch("http://192.168.1.23:8080/api/usuarios", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
