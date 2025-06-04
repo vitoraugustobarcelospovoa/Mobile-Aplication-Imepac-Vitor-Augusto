@@ -56,4 +56,10 @@ public class UsuarioService {
 
         return user; // Ou só retorne uma string se preferir, mas retornar o user é mais útil para JWT ou pegar dados
     }
+    public List<UserModel> buscarPorNomeOuEmail(String nome, String email) {
+        if ((nome == null || nome.isBlank()) && (email == null || email.isBlank())) {
+            return listar();
+        }
+        return usuarioRepository.buscarPorNomeOuEmail(nome, email);
+    }
 }

@@ -57,5 +57,11 @@ public class UsuarioController {
             return ResponseEntity.status(401).body(ex.getMessage());
         }
     }
+    @GetMapping("/buscar")
+    public ResponseEntity<List<UserModel>> buscarUsuarios(
+            @RequestParam(required = false) String nome,
+            @RequestParam(required = false) String email) {
+        return ResponseEntity.ok(usuarioService.buscarPorNomeOuEmail(nome, email));
+    }
 }
 

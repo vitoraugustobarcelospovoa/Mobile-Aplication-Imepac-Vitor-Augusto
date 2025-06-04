@@ -40,4 +40,12 @@ public class BeneficiarioController {
         beneficiarioService.deletar(id);
         return ResponseEntity.noContent().build();
     }
+
+    @GetMapping("/buscar")
+    public ResponseEntity<List<BeneficiarioModel>> buscarPorNomeOuCnpj(
+            @RequestParam(required = false) String nome,
+            @RequestParam(required = false) String cnpjCpf) {
+        return ResponseEntity.ok(beneficiarioService.buscarPorNomeOuCnpj(nome, cnpjCpf));
+    }
+
 }

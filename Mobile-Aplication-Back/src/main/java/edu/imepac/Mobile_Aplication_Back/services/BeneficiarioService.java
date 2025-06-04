@@ -42,6 +42,13 @@ public class BeneficiarioService {
         existente.setObservacoes(beneficiarioAtualizado.getObservacoes());
         return beneficiarioRepository.save(existente);
     }
+    public List<BeneficiarioModel> buscarPorNomeOuCnpj(String nome, String cnpjCpf) {
+        if ((nome == null || nome.isBlank()) && (cnpjCpf == null || cnpjCpf.isBlank())) {
+            return listarTodos();
+        }
+        return beneficiarioRepository.buscarPorNomeOuCnpj(nome, cnpjCpf);
+    }
+
 
     public void deletar(Long id) {
         beneficiarioRepository.deleteById(id);
